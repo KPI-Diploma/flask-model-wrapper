@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 
 def run_model(colors):
+    assert isinstance(colors, list), "Input should be an array"
     assert len(colors) == 3, "Input should be an array of length 3"
     assert all(isinstance(color, str) for color in colors), "Input should be an array of 3 colors"
 
